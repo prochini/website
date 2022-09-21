@@ -1,3 +1,4 @@
+import { GetOpenDataService } from './../service/get-open-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetOpenDataComponent implements OnInit {
 
-  constructor() { }
+  items:any=[];
+  constructor(private getOpenDataService: GetOpenDataService) {
+    this.getOpenDataService.listData()
+    .subscribe(res => {
+      this.items = res;
+      console.log(this.items);
+      
+    })
+   }
 
   ngOnInit(): void {
   }
