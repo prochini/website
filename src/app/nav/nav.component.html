@@ -1,1 +1,10 @@
-<p>nav works!</p>
+
+  <c-nav variant="tabs">
+    <h3>Prochini</h3>
+
+    <a *ngFor="let item of menuItem" [routerLink]="item.id" cNavLink>
+        <svg [cIcon]="icons.cilList" width="25" title="List Icon"></svg>
+        {{item.name}}</a>
+  </c-nav>
+  
+

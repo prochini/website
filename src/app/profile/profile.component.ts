@@ -11,5 +11,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  introduce="I'm a three years expericence software developer, enjoy learn and create new thing,also like to maintain legacy code."
+  skill=["C#","Angular2","MYSQL"];
+  hobbie=["game","read","music"];
 }

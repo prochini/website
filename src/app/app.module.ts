@@ -10,6 +10,9 @@ import { ContactUSComponent } from './contact-us/contact-us.component';
 import { GetOpenDataComponent } from './get-open-data/get-open-data.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { ErrorHandleComponent } from './error-handle/error-handle.component';
+import { GridModule, NavModule } from '@coreui/angular';
+import { IconModule, IconSetService } from '@coreui/icons-angular';
+import { CarouselModule } from '@coreui/angular';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,13 @@ import { ErrorHandleComponent } from './error-handle/error-handle.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NavModule,
+    GridModule,
+    IconModule,
+    CarouselModule
   ],
-  providers: [],
+  providers: [IconSetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
